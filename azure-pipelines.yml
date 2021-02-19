@@ -7,12 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: $(name)
+  vmImage: ubuntu-latest
 
 steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'java'
+    ArtifactName: '$(new)'
     publishLocation: 'Container'
